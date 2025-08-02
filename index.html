@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Giày Nam</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <nav class="main-nav">
+            <div class="nav-left">
+                <a href="#nike">Nike</a>
+                <a href="#adidas">Adidas</a>
+                <a href="#puma">Puma</a>
+            </div>
+            <div class="nav-center">
+                <img src="https://scontent.fsgn5-13.fna.fbcdn.net/v/t39.30808-1/527025571_122215626650127603_2149547049766314063_n.jpg?stp=c78.0.624.624a_dst-jpg_s200x200_tt6&_nc_cat=106&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=mFOjuwyz5ZwQ7kNvwFLXQkr&_nc_oc=Adl-GiCLPFENr3dEvw6BK8XlBvxuZSP4lFkUQKLmoXO1nyXVYLtzay2U7oQgsD3BAVk&_nc_zt=24&_nc_ht=scontent.fsgn5-13.fna&_nc_gid=3E--YBMIlR9Tr-0YJLTNnQ&oh=00_AfT98CkCsOPMAiMnENbEkhPU4RW33QIGPq8_WBO3buXqiA&oe=6893C42C" alt="Logo Shop" class="logo">
+            </div>
+            <div class="nav-right">
+                <a href="#" onclick="toggleCart()">Giỏ hàng 🛒 <span id="cart-count">0</span></a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- BANNER -->
+    <section class="banner">
+        <div class="slides">
+            <div class="slide">
+                <img src="https://i.pinimg.com/originals/9d/a3/e0/9da3e068d033833c8f23c7c931c9c760.gif" alt="Nike Banner">
+                <div class="banner-text">
+                    <h1>NIKE NEW COLLECTION</h1>
+                    <p>Khám phá bộ sưu tập giày nam mới nhất</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://i.pinimg.com/736x/56/eb/62/56eb626a2b4bfd60564ad1ec05c5a767.jpg" alt="Adidas Banner">
+                <div class="banner-text">
+                    <h1>ADIDAS STREET STYLE</h1>
+                    <p>Phong cách đường phố, trẻ trung</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://i.pinimg.com/1200x/e9/27/90/e927900677f543ed9ab30771aadeaf1b.jpg" alt="Puma Banner">
+                <div class="banner-text">
+                    <h1>PUMA SPORT</h1>
+                    <p>Năng động - Cá tính - Đậm chất thể thao</p>
+                </div>
+            </div>
+        </div>
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        <div class="dots">
+            <span onclick="currentSlide(0)"></span>
+            <span onclick="currentSlide(1)"></span>
+            <span onclick="currentSlide(2)"></span>
+        </div>
+    </section>
+
+    <!-- NIKE -->
+    <section id="nike" class="brand-section">
+        <h2>NIKE</h2>
+        <div class="product-list">
+            <!-- Nike 1 -->
+            <div class="product">
+                <div class="product-slider">
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/c3d437a4-3537-4cf2-968e-271fadd8f702/AIR+FORCE+1+%2707+LV8.png" class="active">
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/5718b9c3-c4f6-4fe6-92be-20836bfae6e6/AIR+FORCE+1+%2707+LV8.png">
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/4eee662b-41b8-411b-a332-de94956e0f94/AIR+FORCE+1+%2707+LV8.png">
+                    <button class="prev-img" onclick="changeProductImage(this, -1)">&#10094;</button>
+                    <button class="next-img" onclick="changeProductImage(this, 1)">&#10095;</button>
+                </div>
+                <h3>Nike Air Force 1 '07 LV8</h3>
+                <p class="price">3,519,000₫</p>
+                <label>Size:</label>
+                <select class="size">
+                    <option>38</option><option>39</option><option>40</option>
+                    <option>41</option><option>42</option><option>43</option>
+                    <option>44</option><option>45</option>
+                </select>
+                <button onclick="addToCart(this, 'Nike Air Force 1', 2500000)">Thêm vào giỏ</button>
+            </div>
+
+            <!-- Nike 2 -->
+            <div class="product">
+                <div class="product-slider">
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/d3a7852a-77bd-41c3-b496-688b0dd50e71/AIR+MAX+TL+2.5.png" class="active">
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/aadcb04e-580c-4c69-918f-8b84aa6ed72e/AIR+MAX+TL+2.5.png">
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/2ac907d7-8464-41e8-8cfb-b4660ad8378a/AIR+MAX+TL+2.5.png">
+                    <button class="prev-img" onclick="changeProductImage(this, -1)">&#10094;</button>
+                    <button class="next-img" onclick="changeProductImage(this, 1)">&#10095;</button>
+                </div>
+                <h3>Nike Air Max TL 2.5</h3>
+                <p class="price">5,279,000₫</p>
+                <label>Size:</label>
+                <select class="size">
+                    <option>38</option><option>39</option><option>40</option>
+                    <option>41</option><option>42</option><option>43</option>
+                    <option>44</option><option>45</option>
+                </select>
+                <button onclick="addToCart(this, 'Nike Air Max 90', 3200000)">Thêm vào giỏ</button>
+            </div>
+
+            <!-- Nike 3 -->
+            <div class="product">
+                <div class="product-slider">
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/1e2ce8a9-1452-455c-b637-beca735ab9ac/W+NIKE+DUNK+LOW+NEXT+NATURE.png" class="active">
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/a5f788d9-208d-47f5-a90a-6e331cd6acbf/W+NIKE+DUNK+LOW+NEXT+NATURE.png">
+                    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/8d6b6d0d-c499-417e-a93a-7381652c1cac/W+NIKE+DUNK+LOW+NEXT+NATURE.png">
+                    <button class="prev-img" onclick="changeProductImage(this, -1)">&#10094;</button>
+                    <button class="next-img" onclick="changeProductImage(this, 1)">&#10095;</button>
+                </div>
+                <h3>Nike Dunk Low Next Nature</h3>
+                <p class="price">2,929,000₫</p>
+                <label>Size:</label>
+                <select class="size">
+                    <option>38</option><option>39</option><option>40</option>
+                    <option>41</option><option>42</option><option>43</option>
+                    <option>44</option><option>45</option>
+                </select>
+                <button onclick="addToCart(this, 'Nike Dunk Low', 2900000)">Thêm vào giỏ</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ADIDAS -->
+    <section id="adidas" class="brand-section">
+        <h2>ADIDAS</h2>
+        <div class="product-list">
+            <!-- Adidas 1 -->
+            <div class="product">
+                <div class="product-slider">
+                    <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/ff67e3405f7f46eca232d3aa4e0b78e9_9366/Giay_Ultraboost_5_trang_ID8810_HM1.jpg" class="active">
+                    <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/cf3033fe07404c62a12fca0a458c8924_9366/Giay_Ultraboost_5_mau_xanh_la_ID8819_HM1.jpg">
+                    <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/3ddf058eeae74c769a571c9500b0f19a_9366/Giay_Ultraboost_5_trang_JH9070_HM1.jpg">
+                    <button class="prev-img" onclick="changeProductImage(this, -1)">&#10094;</button>
+                    <button class="next-img" onclick="changeProductImage(this, 1)">&#10095;</button>
+                </div>
+                <h3>Adidas Ultraboost 5</h3>
+                <p class="price">3,430,000₫</p>
+                <label>Size:</label>
+                <select class="size">
+                    <option>38</option><option>39</option><option>40</option>
+                    <option>41</option><option>42</option><option>43</option>
+                    <option>44</option><option>45</option>
+                </select>
+                <button onclick="addToCart(this, 'Adidas Ultraboost', 3000000)">Thêm vào giỏ</button>
+            </div>
+
+            <!-- Adidas 2 -->
+            <div class="product">
+                <div class="product-slider">
+                    <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/18cc8e88964b41fc93a32ee878f5d213_9366/Giay_Superstar_trang_JQ4729_01_00_standard.jpg" class="active">
+                    <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/98e30d2eca1f4cf59e5db8f2fee64a59_9366/Giay_Superstar_trang_JQ4728_01_00_standard.jpg">
+                    <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/1a6c516af64c4832829354533392a713_9366/Giay_Superstar_DJen_JI0079_01_standard.jpg">
+                    <button class="prev-img" onclick="changeProductImage(this, -1)">&#10094;</button>
+                    <button class="next-img" onclick="changeProductImage(this, 1)">&#10095;</button>
+                </div>
+                <h3>Adidas Superstar</h3>
+                <p class="price">2,600,000₫</p>
+                <label>Size:</label>
+                <select class="size">
+                    <option>38</option><option>39</option><option>40</option>
+                    <option>41</option><option>42</option><option>43</option>
+                    <option>44</option><option>45</option>
+                </select>
+                <button onclick="addToCart(this, 'Adidas Superstar', 2700000)">Thêm vào giỏ</button>
+            </div>
+
+            <!-- Adidas 3 -->
+            <div class="product">
+                <div class="product-slider">
+                    <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/f5534d5f7fa14abc8affa5c6baa1d065_9366/SAMBA_OG_W_Mau_xanh_da_troi_JR8829_01_00_standard.jpg" class="active">
+                    <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/e9c96702453f446ebf4ab28047333545_9366/SAMBA_OG_W_Hong_JR8830_01_00_standard.jpg">
+                    <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/3bbecbdf584e40398446a8bf0117cf62_9366/Giay_Samba_OG_trang_B75806_01_00_standard.jpg">
+                    <button class="prev-img" onclick="changeProductImage(this, -1)">&#10094;</button>
+                    <button class="next-img" onclick="changeProductImage(this, 1)">&#10095;</button>
+                </div>
+                <h3> Samba OG</h3>
+                <p class="price">2,700,000₫</p>
+                <label>Size:</label>
+                <select class="size">
+                    <option>38</option><option>39</option><option>40</option>
+                    <option>41</option><option>42</option><option>43</option>
+                    <option>44</option><option>45</option>
+                </select>
+                <button onclick="addToCart(this, 'Adidas Samba OG', 2900000)">Thêm vào giỏ</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- PUMA -->
+    <section id="puma" class="brand-section">
+        <h2>PUMA</h2>
+        <div class="product-list">
+            <!-- Puma 1 -->
+            <div class="product">
+                <div class="product-slider">
+                    <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/402373/01/sv01/fnd/VNM/fmt/png/Gi%C3%A0y-th%E1%BB%83-thao-RS-X-PUMA-x-TNMT" class="active">
+                    <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/369449/28/sv01/fnd/VNM/fmt/png/Gi%C3%A0y-th%E1%BB%83-thao-RS-X-Toys">
+                    <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/369449/30/sv01/fnd/VNM/fmt/png/Gi%C3%A0y-th%E1%BB%83-thao-RS-X-Toys">
+                    <button class="prev-img" onclick="changeProductImage(this, -1)">&#10094;</button>
+                    <button class="next-img" onclick="changeProductImage(this, 1)">&#10095;</button>
+                </div>
+                <h3>Puma RS-X</h3>
+                <p class="price">2,400,000₫</p>
+                <label>Size:</label>
+                <select class="size">
+                    <option>38</option><option>39</option><option>40</option>
+                    <option>41</option><option>42</option><option>43</option>
+                    <option>44</option><option>45</option>
+                </select>
+                <button onclick="addToCart(this, 'Puma RS-X', 2800000)">Thêm vào giỏ</button>
+            </div>
+
+            <!-- Puma 2 -->
+            <div class="product">
+                <div class="product-slider">
+                    <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/396463/45/sv01/fnd/VNM/fmt/png/Gi%C3%A0y-th%E1%BB%83-thao-Palermo" class="active">
+                    <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/396463/63/sv01/fnd/VNM/fmt/png/Gi%C3%A0y-th%E1%BB%83-thao-Palermo">
+                    <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/396463/63/sv01/fnd/VNM/fmt/png/Gi%C3%A0y-th%E1%BB%83-thao-Palermo">
+                    <button class="prev-img" onclick="changeProductImage(this, -1)">&#10094;</button>
+                    <button class="next-img" onclick="changeProductImage(this, 1)">&#10095;</button>
+                </div>
+                <h3>Puma Palermo</h3>
+                <p class="price">2,300,000đ</p>
+                <label>Size:</label>
+                <select class="size">
+                    <option>38</option><option>39</option><option>40</option>
+                    <option>41</option><option>42</option><option>43</option>
+                    <option>44</option><option>45</option>
+                </select>
+                <button onclick="addToCart(this, 'Puma Palermo', 2600000)">Thêm vào giỏ</button>
+            </div>
+
+            <!-- Puma 3 -->
+            <div class="product">
+                <div class="product-slider">
+                    <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/401560/02/sv01/fnd/VNM/fmt/png/Gi%C3%A0y-th%E1%BB%83-thao-Inhale" class="active">
+                    <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/401560/11/sv01/fnd/VNM/fmt/png/Gi%C3%A0y-th%E1%BB%83-thao-Inhale">
+                    <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/401560/11/sv01/fnd/VNM/fmt/png/Gi%C3%A0y-th%E1%BB%83-thao-Inhale">
+                    <button class="prev-img" onclick="changeProductImage(this, -1)">&#10094;</button>
+                    <button class="next-img" onclick="changeProductImage(this, 1)">&#10095;</button>
+                </div>
+                <h3>Puma Inhale</h3>
+                <p class="price">3,000,000₫</p>
+                <label>Size:</label>
+                <select class="size">
+                    <option>38</option><option>39</option><option>40</option>
+                    <option>41</option><option>42</option><option>43</option>
+                    <option>44</option><option>45</option>
+                </select>
+                <button onclick="addToCart(this, 'Puma Inhale', 2400000)">Thêm vào giỏ</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- GIỎ HÀNG -->
+    <div id="cart-popup" class="cart-popup">
+        <h3>Giỏ hàng</h3>
+        <ul id="cart-items"></ul>
+        <p><strong>Tổng tiền:</strong> <span id="cart-total">0</span>₫</p>
+        <button onclick="closeCart()">Đóng</button>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 Fizer Store</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
